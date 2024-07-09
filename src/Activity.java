@@ -5,6 +5,7 @@
  */
 
 public class Activity {
+    private long id;
     private long seconds;
     private double distance;
     private String name;
@@ -28,6 +29,7 @@ public class Activity {
         this.description = description;
         this.date = date;
         this.time = time;
+        this.id = IDs.generateActivityID();
     }
 
     /**

@@ -1,7 +1,7 @@
-import java.time.Duration;
 
 public class Driver {
     public static void main(String[] args) {
-        Duration d = new Duration(100, 5);
+        User u = new User("Grant Trentz", "gtrentz@uiowa.edu", "abc123", 'M');
+        System.out.println(u);
     }
 }

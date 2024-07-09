@@ -1,10 +1,11 @@
 /**
  * Class to store user info
  * @author gtrentz
- * Created 07/05/2024
+ * Created: 07/05/2024
  */
 
 public class User {
+    private long id;
     private String name;
     private String email;
     private String password;
@@ -26,6 +27,7 @@ public class User {
         this.password = password;
         this.gender = gender;
         this.totalMiles = 0; this.weeklyMiles = 0; this.ytdMiles = 0;
+        this.id = IDs.generateUserID();
     }
 
     /**
@@ -66,6 +68,10 @@ public class User {
         this.totalMiles += a.getDistance();
         this.weeklyMiles += a.getDistance();
         this.ytdMiles += a.getDistance();
+    }
+
+    public String toString() {
+        return "Name: " + name + "\nEmail: " + email + "\nGender:" + gender;
     }
 
 }
